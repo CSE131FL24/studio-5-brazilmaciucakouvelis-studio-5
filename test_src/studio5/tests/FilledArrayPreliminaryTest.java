@@ -39,13 +39,13 @@ public class FilledArrayPreliminaryTest {
 
 	@Test
 	public void testArrayLength2() {
-		int length = 2;
-		int value = 4;
-		int[] actuals = Methods.filledArray(length, value);
-		assertNotNull(actuals);
-		assertEquals(value, actuals.length); // Incorrect: FIXME!
-		int[] expecteds = { value, value };
-		assertArrayEquals(expecteds, actuals);
+		int length = 2; // Desired length of the array
+		int value = 4; // Value to fill the array with
+		int[] actuals = Methods.filledArray(length, value); // Call the method
+		assertNotNull(actuals); // Ensure the array is not null
+		assertEquals(length, actuals.length); // Check if the array length is correct
+		int[] expecteds = { value, value }; // Expected array content
+		assertArrayEquals(expecteds, actuals); // Check if the actual array matches the expected
 	}
 
 	@Test
